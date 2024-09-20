@@ -43,6 +43,7 @@ app.get('/api/products', (req, res) => {
         res.send(filterProducts);
         return
     }
+    
     setTimeout(()=>{
         res.send(products)
     }, 3000)
