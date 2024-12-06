@@ -1,0 +1,14 @@
+# Todo App using contextAPI
+
+
+# Todo App using Redux ToolKit
+
+
+
+# API handling in react
+    1. wrote the basic custom api with search query in backend + Basic frontend 
+    3. using Axios & its features
+
+
+
+#Major Blog project with AppWrite
