@@ -11,7 +11,7 @@ function App() {
 
   //1.  useEffect ek hook he islie direct usme async await use nahi karsakte islie use call back me IIFE ()()
   useEffect(() => {
-    //2. since har ek letter query karne pe har baar bar api req ho raha he , though page rerender ho raha he multiple times causing race condition, so we will use axios feature AbortController (it cancels the old request) ,jise ham get me bhejte he, NOTE : yaha unnecessary req cancel nahi ho rhi he wo karte through debouncing
+    //2. since har ek letter query karne pe har baar bar api req ho raha he , though page rerender ho raha he multiple times causing race condition, so we will use axios feature AbortController (it cancels the old request) ,jise ham get me bhejte he, NOTE : yaha unnecessary req cancel nahi ho rhi he yaha bs race condition ko avoid kar rahe (means jis chiz ki req pehle gayi he uska data pehle aye taki user ko updated UI dikha sake) wo karte through debouncing
 
     const controller = new AbortController() //step1
 

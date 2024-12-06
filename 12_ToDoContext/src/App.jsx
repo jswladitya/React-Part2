@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { TodoProvider } from "./contexts/ToDoContext";
 import TodoForm from "./components/TodoForm";
-import TodoItem from "./components/TodoItem"
+import TodoItem from "./components/TodoItem";
 
 function App() {
   //jo todos context se ayenge unhe state me rakhenge
@@ -17,7 +17,7 @@ function App() {
     //purani array manga lo aur purane array se nayi array bana lo aur usme purani values aur nayi values dono daal do using spread
     // setTodos((prevArray) => [todo, ...prevArray])
     setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
-    // Date.Now karke id bana li ek todo ke lie aur baki sari values spread kardi us tofo ki
+    // Date.Now karke id bana li ek todo ke lie aur baki sari values spread kardi us todo ki as it means us particular todo ki hamne bas id change ki baki same as it is daal dia
   };
 
   //update todo : id lenge jisme update karna he , kisibhi bhi todo ki id ager match kar gayi hamare di gyi id se to naye todo ko add kardo nhi to old wale todo ko hi rehne do
@@ -31,6 +31,7 @@ function App() {
   const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id));
   };
+  //means jo jo todo ki id nhi match karti di hui id se toh unsabko filter karlo
 
   //toggle complete
   const toggleComplete = (id) => {
@@ -40,13 +41,12 @@ function App() {
           prevTodo.id === id
             ? { ...prevTodo, completed: !prevTodo.completed }
             : prevTodo
-        // prevTodo likhne se us todo ki saari values aa gayi & isme se sirf ek value change kardo
         // means -> us todo ka jo completed he use hi bas over ride kardo ie.., pehle false tha to true kardo or vice versa
       )
     );
   };
-  //till here we have completed the basic functionalities of context
 
+  //Local storage
   useEffect(() => {
     // local storage me values get karte time json me convert karte he aur set karte time string me
     const todos = JSON.parse(localStorage.getItem("todos"));
@@ -61,8 +61,6 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-
-  
   return (
     <TodoProvider
       value={{ todos, addTodo, toggleComplete, deleteTodo, updateTodo }}
@@ -90,8 +88,6 @@ function App() {
 }
 
 export default App;
-
-
 
 //LocalStorage
 //jaise hi app load hoye ho sakta he usme already kuch todos added ho & refresh karne par bhi wahi rahe, to islie inhe browser ke local storage me save karna hota he

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useTodo } from "../contexts/ToDoContext";
 
+//hamare pass todo aya he hamne use destructure krke nikal lia
 function TodoItem({ todo }) {
   const [isTodoEditable, setisTodoEditable] = useState(false);
+
+  // its an updated todo msg
   const [todoMsg, setTodoMsg] = useState(todo.todo)
 
   const {updateTodo, deleteTodo, toggleComplete} = useTodo()

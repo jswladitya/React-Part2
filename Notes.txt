@@ -1,6 +1,5 @@
 # Todo App using contextAPI
 
-
 # Todo App using Redux ToolKit
 
 
