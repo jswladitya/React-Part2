@@ -1,6 +1,11 @@
 # Todo App using contextAPI
 
+
+
 # Todo App using Redux ToolKit
+    1. making a slice or global store & wrap App.jsx with the Provider of react-redux also give store = {store}
+    2. we just need useDispatch & useSelector to add & find values from the store
+    3. created todoSlice & Todos components 
 
 
 

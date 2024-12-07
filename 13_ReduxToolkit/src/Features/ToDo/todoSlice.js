@@ -11,7 +11,7 @@ const initialState = {
 
 //slice reducer ka hi bada version he & reducer is just an functionality
 export const todoSlice = createSlice({
-    //ab yaha slices ke naam hote he
+    //ab yaha slices(features) ke naam hote he
     name: 'todo', //name property deni hoti he
     initialState,
     reducers: {
@@ -35,7 +35,7 @@ export const todoSlice = createSlice({
             state.todos = state.todos.filter((todo) => todo.id !== action.payload)
         },
         //todo list me jo hamaer todo ki id he ager wo nahi match kar jaye jo hamne payload se id bheji he
-        //make updateTodo, updateTodo & ToggleComplete by own 
+        //make updateTodo & ToggleComplete by own 
     }
 })
 //createSlice ek method he inme sirf object hi ate he

@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-// removeTodo action perform karana chahata hu , toh ager koi bhi action lunga toh us action ko store me update karna padega
+// removeTodo action perform karana chahata hu , toh ager koi bhi action lunga toh us action ko store me update or dispatch karna padega
 import { removeTodo } from "../Features/ToDo/todoSlice";
 
 function Todos() {

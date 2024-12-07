@@ -8,6 +8,7 @@ import Todos from './components/Todos'
 function App() {
   return (
    <>
+  {/* since we have wrapped App with Provider of react-redux & gave the access of store, so both components have access to store */}
    <AddTodo/>
    <Todos/>
    </>

@@ -9,6 +9,6 @@ export const store = configureStore({
     reducer: todoReducer
 })
 //most of the cheeze yaha object hi lete he
-//reducers me functions hote he aur wahi store me modifications kar sakte he
+//reducers functions hote he aur wahi store me modifications kar sakte he
 // useSelector jab store ki value access karni he
 //useDispatch jab store me value bhejni he ya add karni he
