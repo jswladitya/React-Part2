@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { useTodo } from '../contexts/ToDoContext';
 
@@ -11,6 +12,7 @@ function TodoForm() {
         if(!todo) return 
         
         // and ager uske ander uske ander kuch values he
+        // addTodo({id:Date.now() ,todo: todo, completed: false}) //hamne already id de di he
         addTodo({todo: todo, completed: false})
         setTodo("")
     }

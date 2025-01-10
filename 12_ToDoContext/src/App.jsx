@@ -46,11 +46,14 @@ function App() {
     );
   };
 
-  //Local storage
+  //Local storage -> (setItem & getItem)
+  // 
   useEffect(() => {
     // local storage me values get karte time json me convert karte he aur set karte time string me
     const todos = JSON.parse(localStorage.getItem("todos"));
 
+
+    //it means jo bhi naya todo add ho rha he use array me daalo phir setLocalStorage use local storage me add kar dega
     if (todos && todos.length > 0) {
       setTodos(todos);
     }

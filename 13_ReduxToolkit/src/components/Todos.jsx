@@ -1,10 +1,13 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 // removeTodo action perform karana chahata hu , toh ager koi bhi action lunga toh us action ko store me update or dispatch karna padega
 import { removeTodo } from "../Features/ToDo/todoSlice";
 
 function Todos() {
-  const todos = useSelector((state) => state.todos);
+  const todos = useSelector((state) => state.todos); 
+  //ham yaha pe store me se todos ko le aye 
+  
   const dispatch = useDispatch();
   return (
     <>

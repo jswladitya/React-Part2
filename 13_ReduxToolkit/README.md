@@ -1,5 +1,5 @@
 ***Summary 
-
+NOTE : Install react-redux & @redux/toolkit
 1. start karte he store banane se ya store conigure karne se , har app kaek hi store hota he jise kehte he single source of truth
 
 2. ab us configured store me saare reducer introduce karna he kyuki store ke ander jab bhi values update hogi wo har tarah se update nahi leta he toh iske lie store ko reducer ki list ka pata hona chahiye
